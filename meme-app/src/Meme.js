@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-class Judge extends Component {
+class Meme extends Component {
  render() {
     return (
       <div>
-        <h2>Who wins?</h2>
+        <h2>Choose a caption!</h2>
       </div>
     );
   }
 }
 
-export default Judge;
+export default Meme;
