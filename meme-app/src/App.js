@@ -16,31 +16,31 @@ import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 
-const style = {
-  marginLeft: 100
-};
 
 class App extends Component {
-  state = {
-    open: false,
-    // meme: null
-  };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     open: false,
+  //     meme: null
+  //   }
+  // };
 
-  handleTouchTap = (event) => {
+  // handleTouchTap = (event) => {
     // This prevents ghost click.
-    event.preventDefault();
-
-    this.setState({
-      open: true,
-      anchorEl: event.currentTarget,
-    });
-  };
-
-  handleRequestClose = () => {
-    this.setState({
-      open: false,
-    });
-  };
+  //   event.preventDefault();
+  //
+  //   this.setState({
+  //     open: true,
+  //     anchorEl: event.currentTarget,
+  //   });
+  // };
+  //
+  // handleRequestClose = () => {
+  //   this.setState({
+  //     open: false,
+  //   });
+  // };
 
   // componentDidMount() {
   //   const.that = this;
@@ -64,7 +64,6 @@ class App extends Component {
         <div>
           <Link to="/"><RaisedButton onClick={this.handleTouchTap} label="Pick Meme!" fullWidth={true} primary={true} /></Link>
           <Popover
-            style={style}
             open={this.state.open}
             anchorEl={this.state.anchorEl}
             anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
