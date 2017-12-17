@@ -11,72 +11,26 @@ import Meme from './Meme';
 import Judge from './Judge';
 import Winner from './Winner';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
 import RaisedButton from 'material-ui/RaisedButton';
-import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     open: false,
-  //     meme: null
-  //   }
-  // };
-
-  // handleTouchTap = (event) => {
-    // This prevents ghost click.
-  //   event.preventDefault();
-  //
-  //   this.setState({
-  //     open: true,
-  //     anchorEl: event.currentTarget,
-  //   });
-  // };
-  //
-  // handleRequestClose = () => {
-  //   this.setState({
-  //     open: false,
-  //   });
-  // };
-
-  // componentDidMount() {
-  //   const.that = this;
-  //   fetch('')
-  //     .then((response) => response.json)
-  //     .then((responseJson) => )
-  // }
-
-  // renderCharacters() {
-  //   const { characters } = this.state; /*deconstruct this.state.characters*/
-  //   if(characters && characters.length > 0) {
-  //     return characters.map((obj, key) => {
-  //       return <p key={key}>{obj.name}</p>
-  //     })
-  //   }
-  // }
 
   render() {
     return (
       <Router>
         <div>
-          <Link to="/"><RaisedButton onClick={this.handleTouchTap} label="Pick Meme!" fullWidth={true} primary={true} /></Link>
-          <Popover
-            open={this.state.open}
-            anchorEl={this.state.anchorEl}
-            anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-            targetOrigin={{horizontal: 'left', vertical: 'top'}}
-            onRequestClose={this.handleRequestClose}
-          >
-            <Menu>
-              <MenuItem><Link to="/Start.js"><RaisedButton label="Who is playing?" fullWidth={true} primary={true} /></Link></MenuItem>
-              <MenuItem><Link to="/Meme.js"><RaisedButton label="Choose a caption!" fullWidth={true} primary={true} /></Link></MenuItem>
-              <MenuItem><Link to="/Judge.js"><RaisedButton label="Pick a winner!" fullWidth={true} primary={true} /></Link></MenuItem>
-              <MenuItem><Link to="/Winner.js"><RaisedButton label="Winner!" fullWidth={true} primary={true} /></Link></MenuItem>
-            </Menu>
-          </Popover>
+          // <Link to="/"><RaisedButton onClick={this.handleTouchTap} label="Pick Meme!" fullWidth={true} primary={true} /></Link>
+          <Menu>
+            <MenuItem><Link to="/Start.js"><RaisedButton label="Who is playing?" fullWidth={true} primary={true} /></Link></MenuItem>
+            <MenuItem><Link to="/Meme.js"><RaisedButton label="Choose a caption!" fullWidth={true} primary={true} /></Link></MenuItem>
+            <MenuItem><Link to="/Judge.js"><RaisedButton label="Pick a winner!" fullWidth={true} primary={true} /></Link></MenuItem>
+            <MenuItem><Link to="/Winner.js"><RaisedButton label="Winner!" fullWidth={true} primary={true} /></Link></MenuItem>
+          </Menu>
 
           <hr/>
           <Route exact path="/" component={App}/>
