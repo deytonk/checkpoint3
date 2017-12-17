@@ -22,7 +22,7 @@ class Start extends Component {
               hintText="Judge"
               floatingLabelText="Floating Label Text"
             />
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" />
           </form>
         </div>
       </div>
